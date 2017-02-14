@@ -98,7 +98,7 @@ serve(customer: { customersInLine.remove(at: 0) } )
 
 > 一個常見的例子是常見的 completion handle ，它們在函數運行完成後才執行。
 
-_-_-_-_-_-_-_-
+_-_-_-_-_-_-_-_
 
 > 當 closure 的類型用 @escaping 標記之後，在 closure 內使用類的屬性或方法時，需要用 self 標明。
 
