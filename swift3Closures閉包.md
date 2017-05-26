@@ -4,7 +4,7 @@
 
 > 已知參數function
 
-```
+```swift
 func test(_ value:Int,_ fun:(Int)->Int)->Int{
       return fun(value)
 }
@@ -26,7 +26,7 @@ test(3,{$0*100})
 
 > 簡化閉包參數流程
 
-```
+```swift
 //  定義sort閉包function
 extension Array{
     func mySort(clo:(_ s1: String, _ s2: String)-> Bool)-> [Element]{
@@ -69,7 +69,7 @@ let numberc = num.mySort(clo:<)
 
 @noescape和@autoclosure屬性現在必須寫在參數類型之前，而不是參數名稱之前
 
-```
+```swift
 func doSomething(withParameter parameter: Int, completion: @escaping () -> ()) {
     // ...
 }
@@ -77,7 +77,7 @@ func doSomething(withParameter parameter: Int, completion: @escaping () -> ()) {
 
 用 @autoclosure 標記 clousre 參數的類型後，在函數呼叫的時候就可以去掉 closure 的大括號{}，把 closure 以其返回值的形式傳入函數中
 
-```
+```swift
 var customersInLine = ["Alex", "Ewa", "Barry", "Daniella"]
 
 func serve(customer customerProvider: () -> String) {
@@ -102,7 +102,7 @@ _-_-_-_-_-_-_-_
 
 > 當 closure 的類型用 @escaping 標記之後，在 closure 內使用類的屬性或方法時，需要用 self 標明。
 
-```
+```swift
 class SomeClass {
     var x = 10
     func doSomething() {
